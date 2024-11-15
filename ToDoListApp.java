@@ -42,7 +42,7 @@ class GUI {
         mainPanel.add(titleLabel);
 
 
-        taskField = new JTextField(15);  // Reduced size of the text field
+        taskField = new JTextField(15);  
         Border border = BorderFactory.createLineBorder(Color.GRAY, 1);
         taskField.setBorder(border);
 
@@ -59,11 +59,10 @@ class GUI {
 
 
         taskPanel.setLayout(new BoxLayout(taskPanel, BoxLayout.Y_AXIS));
-        taskPanel.setAlignmentX(Component.LEFT_ALIGNMENT);  // Align tasks to the left
+        taskPanel.setAlignmentX(Component.LEFT_ALIGNMENT);  
         JScrollPane scrollPane = new JScrollPane(taskPanel);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setPreferredSize(new Dimension(380, 300));  // More space for tasks
-
+        scrollPane.setPreferredSize(new Dimension(380, 300));  
         mainPanel.add(scrollPane, BorderLayout.CENTER);
 
         frame.add(mainPanel);
@@ -80,7 +79,7 @@ class GUI {
                 Task newTask = new Task(taskName);
                 tasks.add(newTask);
                 TaskUI taskUI = new TaskUI(newTask);
-                taskUI.setAlignmentX(Component.LEFT_ALIGNMENT);  // Align each task to the left
+                taskUI.setAlignmentX(Component.LEFT_ALIGNMENT);  
                 taskPanel.add(taskUI);
                 taskPanel.revalidate();
                 taskPanel.repaint();
